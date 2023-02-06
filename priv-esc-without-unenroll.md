@@ -1,4 +1,4 @@
-# Root privelige escalation on a enrolled Chromebook without un-enrolling 
+# Privelige escalation without un-enrolling
 
 Following the recent discovery of the set_cellular_ppp crosh exploit and the (re)discovery of the various root escalation bugs found within ChromeOS (thanks, CoolElectronics), I saw that it was almost exclusively being used to un-enroll Chromebooks. Quite plainly, that's a terrible idea, and un-enrolling a district-managed Chromebook can result in serious consequences if you get caught.
 
