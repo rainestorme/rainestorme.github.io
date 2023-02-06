@@ -21,9 +21,9 @@
 ## Github Stats  
 <div align="center"><img src="https://github-readme-stats.vercel.app/api?username=rainestorme&show_icons=true&count_private=true&hide_border=true" align="center" /></div>  
 
-  
-
 <br/>  
+
+#### Wanna support me? [Spend a couple of minutes using your idle computing power to contribute to my work!](https://rainestorme.netlify.app/)
 
 Recent posts:
 - [Root privelige escalation on a enrolled Chromebook without un-enrolling](https://rainestorme.github.io/priv-esc-without-unenroll)
