@@ -40,9 +40,23 @@ set_cellular_ppp \';bash;exit;\'
 # In bash
 cd ~
 mkdir usbdrv
-
+# TODO: Add root escalation script once it goes public
 # Plug in your usb drive
 fdisk -l
 # Find your device in the list (usually /dev/sda, way at the bottom)
 mount /dev/sdX /home/chronos/usbdrv # Your usb drive should replace /dev/sdX
+cd /home/chronos/usbdrv
+# Chroot setup
+curl https://mirrors.mit.edu/archlinux/iso/2023.02.01/archlinux-bootstrap-2023.02.01-x86_64.tar.gz -o archlinux.tar.gz
+tar -xvf archlinux.tar.gz
+# You should be able to chroot in as normal now, but to perform package managment, you need to mount special filesystems such as /dev, /proc, and /tmp.
+# To just chroot, run:
+chroot ./root.x86_64
+# Or, to mount the special filesystems and chroot
+mount -t proc none /home/chronos/usbdrv/root.x86_64/proc
+mount -o bind /dev /home/chronos/usbdrv/root.x86_64/dev
+mount -o bind /sys /home/chronos/usbdrv/root.x86_64/sys
+mount -o bind /run /home/chronos/usbdrv/root.x86_64/run
+chroot ./root.x86_64
+# If you want to have pacman functional, you need to uncomment a pacman mirror in /etc/pacman.d/mirrorlist
 ```

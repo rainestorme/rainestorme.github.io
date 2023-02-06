@@ -1,3 +1,3 @@
-# Your blog
+# rainestorme's blog
 
-This is the repository for your blog! Click *_config.yml* above to get started and fill in the details. Then click *index.md* and edit it to start creating your home page.
+it's probably not written by chatgpt (no guarantees, though)
