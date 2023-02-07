@@ -1,6 +1,6 @@
 # Adventures in Chroots
 
-This post is a follow-up to "Privelige escalation without un-enrolling". If you haven't read it yet, then you totally should.
+This post is a follow-up to my previous post, [Privelige escalation without un-enrolling](https://rainestorme.github.io/priv-esc-without-unenroll.html). If you haven't read it yet, then you totally should.
 
 After discovering how to run executables off of a USB drive mounted with `exec`, I wanted to get Crouton running, to allow for a graphical environment to run piggybacking off of ChromeOS's X server. After a bit of experimenting, I managed to get everything running as expected, and I'll walk you through the steps below. 
 
