@@ -66,9 +66,9 @@ Finally, we need to install a chroot. A list of targets is available on [here](h
 
 This command will take a bit (for me it took 50 minutes on my `lars` Chromebook) and will eventually prompt you for a username and password. Set them (the password won't be shown in the terminal) and wait for the rest of the process to finish.
 
-Now that you've installed the chroot, you can run `startxfce` (in the case that you chose an xfce desktop environment) and it will mount the required filesystems automatically.
+Now that you've installed the chroot, you can run `startxfce4` (in the case that you chose an xfce desktop environment) and it will mount and unmount the required filesystems automatically.
 
-In the case that you restarted your terminal at any point after installing the chroot, then you can run the following commands to remount the drive and add the scripts back to your `$PATH`:
+In the case that you restarted your terminal at any point after installing the chroot, or you rebooted your chromebook/unplugged the USB drive then you can run the following commands to remount the drive and add the scripts back to your `$PATH`:
 
 ```bash
 # In crosh
@@ -80,5 +80,5 @@ mkdir -p /home/chronos/usbdrv
 mount -o exec,suid,dev,symfollow /dev/sdX /home/chronos/usbdrv # Remember to replace /dev/sdX, use "fdisk -l" to find your drive
 cd /home/chronos/usbdrv
 export PATH="/home/chronos/usbdrv/crouton/host-bin:$PATH"
-startxfce
+startxfce4
 ```
